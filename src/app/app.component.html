@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 [ngStyle] = "titleClass ">
+    Welcome to {{ title }}! {{myObject.Name}}
+  </h1>
+  <p><span *ngIf="deviNumber">Contact {{myObject.Name}} at </span><span *ngIf="deviNumber;else deviEmail">{{deviNumber}}</span></p>
+  <ng-template #deviEmail>devi.singh@dss.com</ng-template>
+  <p>{{CallingService}}</p>
+  <p [@myAnimations] = 'state' (click) = "animateMe()">I will animate</p>
+</div>
+<app-child></app-child>
